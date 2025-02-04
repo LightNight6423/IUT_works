@@ -1,0 +1,164 @@
+html {
+    background-color: #f8b227;
+}
+
+#head{
+    margin-top: 2%;
+    background: rgb(255, 255, 255);
+    min-height: 350px;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-color: black;
+    border-style: solid;
+}
+
+#hedi{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: 2%;
+    margin-top: 5%;
+}
+
+
+#manger{
+    text-align: center;
+    font-weight: 800;
+    margin-top: 10%;
+    font-size: 1.3em;
+}
+
+
+nav {
+    border-top: solid black 2px;
+    border-bottom: solid black 2px;
+    margin-top: 20px;
+}
+
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+nav li {
+    display: inline-block;
+    width: calc(20% - 4px);
+    height: 30px;
+    line-height: 30px;
+    border-right: solid black 2px;
+    text-align: center;
+    color: #000;
+    background-color: #FDC500;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    background-color: #FFF;
+    display: block;
+}
+
+#news article {
+    display: inline-block;
+    width: calc(50% - 15px);
+    text-align: justify;
+    vertical-align: top;
+}
+
+.addPadding {
+    padding-right: 30px;
+}
+
+#news article>div {
+    margin-bottom: 10px;
+}
+
+#news article img {
+    width: 120px;
+    display: inline-block;
+    border: solid black 2px;
+}
+
+#news article h2 {
+    display: inline-block;
+    height: 80px;
+    line-height: 80px;
+    vertical-align: top;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+#container>div {
+    padding: 30px;
+}
+
+#news article {
+    display: inline-block;
+    width: calc(50% - 15px);
+    text-align: justify;
+    vertical-align: top;
+}
+
+#news article a {
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+.evenement{
+    border-top: solid black 2px;
+}
+
+.evenement article h2{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.evenement article {
+    width: calc(33% - 30px);
+    text-align: justify;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.evenement article a{
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.evenement article p{
+    font-size: 15px;
+    margin-top: 0px;
+}
+
+.text{
+    border-top: solid black 2px;
+}
+
+.text aside{
+    float: right;
+    border: solid black 2px;
+    width: 250px;
+    padding: 15px;
+    margin: 0px 0px 30px 30px;
+}
+
+.text p{
+    text-align: justify;
+}

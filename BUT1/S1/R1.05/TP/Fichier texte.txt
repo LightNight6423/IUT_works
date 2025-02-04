@@ -1,0 +1,70 @@
+Exercice 1 :
+1)  La restriction affiche une nouvelle table sans les condtions mises en paramètres. En SQL, elle se traduit par le WHERE.
+
+2)  La différence de deux relations va affiche une nouvelle table dans laquelle se trouve les valeurs de la table 1 qui ne sont pas dans la table 2. En SQL, elle se traduit par la commande EXCEPT.
+
+3) La contrainte check permet d'imoser une condition pur valider la valeur de la colonne et defaut applique une valeur par défaut si aucune valeur n'est entré.
+
+4) |VAL|
+a) | 3 |
+
+4) |VAL|
+b) | 1 |
+
+4) |OBJET |
+c) |Clou  |
+#) |Ecrou |
+#) |Pointe|
+#) |Vis   |
+
+5)a)  Cela affiche une erreur car la colonne objet est défini par varchar(6) or 'Marteau' compte 7 caractères
+
+5)b)  Cela va insérer la valeur à l'intérieur de la table
+
+5)c)  Cela va indiquer une erreur car lors de la création de la table, les contraintes NOT NULL ont été spécifiés indiquant que une valeur doit obligatoirement être rentré or ici on ne rentre que le nom de l'objet.
+
+6)a)  ALTER TABLE STOCK ADD CONSTRAINT STOCK_PK PRIMARY KEY (OBJET)
+
+6)  UPDATE STOCK
+b)  SET prix = prix*1.10
+#)  WHERE OBJET = 'Vis'
+
+6)c)  DELETE FROM STOCK
+
+6)d) DROP TABLE STOCK
+
+Exercice 2:
+1)
+SELECT nom, prenom FROM EMPLOYE e
+JOIN VILLE v ON v.idVille = e.idVille
+WHERE v.ville = 'Limoges' AND dateEmbauche BETWEEN '01/09/2023' AND '30/09/2023' AND salaire > 30000
+ORDER BY salaire ASC
+
+2)
+SELECT COUNT(*) AS CBM FROM EMPLOYE e
+JOIN VILLE v ON v.idVille = e.idVille
+JOIN POSTE p ON p.idPoste = e.idPoste
+WHERE poste = 'ingénieur' AND ville = 'Paris'
+
+3)
+SELECT AVG(salaire) AS MOY_SAL, poste FROM EMPLOYE e
+JOIN POSTE p ON p.idPoste = e.idPoste
+GROUP BY poste
+ORDER BY MOY_SAL DESC
+
+4)
+SELECT entreprise FROM ENTREPRISE
+WHERE idEntreprise NOT IN (SELECT idEntreprise FROM EMPLOYE)
+
+5)
+SELECT nom, prenom FROM EMPLOYE e
+JOIN ENTREPRISE en ON en.idEntreprise = e.idEntreprise
+JOIN VILLE v ON v.idVille = e.idVille
+WHERE en.idVille = e.idVille
+
+6)
+SELECT entreprise FROM ENTREPRISE
+JOIN EMPLOYE e ON en.idEntreprise = e.idEntreprise
+WHERE e.salaire > 60000
+GROUP BY en.entreprise
+HAVING COUNT(e.matricule) >= 2;
