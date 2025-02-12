@@ -1,5 +1,5 @@
 //
-// Created by didry on 11/02/2025.
+// Created by ducouret on 11/02/2025.
 //
 //Saisie chaine puis transfo avec une fonction de minuscule à majuscule avec pointeurs
 
